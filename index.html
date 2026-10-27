@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aust-Swiss Momentum</title>
-    <!-- Zuverlässiges Laden der eleganten Carrd-Schriften über Google Fonts -->
+    <title>Aust Swiss Momentum</title>
+    <!-- Einbindung der eleganten Marcellus-Schriftart für deinen Firmennamen -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Lora:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
             font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; 
-            /* Der originale, edle Carrd-Farbverlauf für maximale Seriösität */
-            background: linear-gradient(135deg, #F3F5F9 0%, #EAEFF5 50%, #F5F7FA 100%);
+            /* Optimierter, extra-sanfter Matt-Farbverlauf für maximale Eleganz */
+            background: linear-gradient(145deg, #F9FBFC 0%, #F1F4F8 60%, #E9EFF5 100%);
             background-attachment: fixed;
             color: #2D3142; 
             line-height: 1.7; 
@@ -26,15 +26,15 @@
             scroll-behavior: smooth;
         }
 
-        /* Haupt-Rahmen (Box), um den edlen Carrd-Karten-Effekt zu erzielen */
+        /* Haupt-Rahmen (Box) für den edlen Carrd-Karten-Effekt */
         .page-wrapper {
             width: 100%;
             max-width: 760px;
             background: #FFFFFF;
-            margin: 40px 20px;
+            margin: 60px 20px;
             border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(13, 24, 44, 0.06);
-            border: 1px solid rgba(250, 251, 253, 0.8);
+            box-shadow: 0 30px 70px rgba(13, 24, 44, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.7);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,27 +42,29 @@
         }
 
         .hero-section {
-            min-height: 70vh;
+            min-height: 65vh;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 80px 40px;
+            padding: 90px 40px;
             text-align: center;
         }
 
+        /* Dein Firmenname in der neuen Marcellus-Schriftart und ohne Bindestrich */
         h1 { 
-            font-family: 'Lora', Georgia, serif; 
-            font-size: 3.2rem; 
+            font-family: 'Marcellus', serif; 
+            font-size: 3.4rem; 
             font-weight: 400; 
-            letter-spacing: -0.5px; 
+            letter-spacing: 1px; 
             margin-bottom: 24px; 
             color: #1D202D; 
+            text-transform: none;
         }
 
         .subtitle { 
-            font-size: 1.2rem; 
+            font-size: 1.15rem; 
             color: #727682; 
             margin-bottom: 48px; 
             max-width: 520px; 
@@ -89,7 +91,7 @@
         }
 
         .brands-section {
-            min-height: 50vh;
+            min-height: 45vh;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -103,9 +105,10 @@
         }
 
         h2 {
-            font-family: 'Lora', Georgia, serif;
-            font-size: 2rem;
+            font-family: 'Marcellus', serif;
+            font-size: 2.1rem;
             font-weight: 400;
+            letter-spacing: 0.5px;
             margin-bottom: 16px;
             color: #1D202D;
         }
@@ -162,9 +165,10 @@
         }
 
         footer h3 {
-            font-family: 'Lora', Georgia, serif;
+            font-family: 'Marcellus', serif;
             font-size: 1.5rem;
             font-weight: 400;
+            letter-spacing: 0.5px;
             margin-bottom: 24px;
             color: #1D202D;
         }
@@ -197,21 +201,20 @@
 
         /* Optimierungen für Mobilgeräte */
         @media (max-width: 480px) {
-            h1 { font-size: 2.4rem; }
-            .hero-section, .brands-section, footer { padding: 48px 20px; }
-            .page-wrapper { margin: 16px 10px; border-radius: 16px; }
+            h1 { font-size: 2.5rem; }
+            .hero-section, .brands-section, footer { padding: 50px 20px; }
+            .page-wrapper { margin: 20px 12px; border-radius: 16px; }
             .logo-card { padding: 35px 40px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Die weisse Inhaltsbox auf dem edlen Farbverlauf -->
     <div class="page-wrapper">
 
         <!-- Sektion 1: Hero -->
         <section class="hero-section">
-            <h1>Aust-Swiss Momentum</h1>
+            <h1>Aust Swiss Momentum</h1>
             <p class="subtitle">Schweizer Online-Shops mit Fokus auf Qualität und Zuverlässigkeit. Entdecken Sie unsere Marken.</p>
             <a href="#marken" class="scroll-btn">Unsere Marken entdecken ↓</a>
         </section>
@@ -222,17 +225,16 @@
             <p class="brand-intro">Klicken Sie auf das Markenlogo, um direkt zu unserem verifizierten Schweizer Onlineshop zu gelangen.</p>
             
             <a href="https://yuniglow.ch" class="logo-card" target="_blank" rel="noopener">
-                <!-- Zieht deine gestochen scharfe Vektordatei direkt aus dem GitHub-Ordner -->
                 <img src="Vector.svg" alt="YuniGlow Logo" class="logo-img">
                 <span>Store öffnen ➔</span>
             </a>
         </section>
 
-        <!-- Sektion 3: Rechtssicheres Schweizer Impressum -->
+        <!-- Sektion 3: Impressum -->
         <footer>
             <h3>Impressum & Kontakt</h3>
             <div class="impressum-grid">
-                <strong>Aust-Swiss Momentum</strong><br>
+                <strong>Aust Swiss Momentum</strong><br>
                 René Aust<br>
                 Aarestrasse 54<br>
                 3052 Zollikofen<br>
