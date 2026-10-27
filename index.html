@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aust-Swiss Momentum</title>
-    <!-- Einbindung hochwertiger Google Fonts für den originalen Carrd-Look -->
+    <!-- Zuverlässiges Laden der eleganten Carrd-Schriften über Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Lora:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Grund-Setup für das minimalistische Carrd-Layout */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background: #FFFFFF; 
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; 
+            /* Der originale, edle Carrd-Farbverlauf für maximale Seriösität */
+            background: linear-gradient(135deg, #F3F5F9 0%, #EAEFF5 50%, #F5F7FA 100%);
+            background-attachment: fixed;
             color: #2D3142; 
             line-height: 1.7; 
             display: flex; 
@@ -25,22 +26,35 @@
             scroll-behavior: smooth;
         }
 
-        /* Sektion 1: Das obere Drittel (Hero-Bereich) */
-        .hero-section {
-            min-height: 85vh;
+        /* Haupt-Rahmen (Box), um den edlen Carrd-Karten-Effekt zu erzielen */
+        .page-wrapper {
             width: 100%;
-            max-width: 800px;
+            max-width: 760px;
+            background: #FFFFFF;
+            margin: 40px 20px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(13, 24, 44, 0.06);
+            border: 1px solid rgba(250, 251, 253, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-section {
+            min-height: 70vh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 24px;
+            padding: 80px 40px;
             text-align: center;
         }
 
         h1 { 
-            font-family: 'Lora', serif; 
-            font-size: 3rem; 
+            font-family: 'Lora', Georgia, serif; 
+            font-size: 3.2rem; 
             font-weight: 400; 
             letter-spacing: -0.5px; 
             margin-bottom: 24px; 
@@ -48,14 +62,13 @@
         }
 
         .subtitle { 
-            font-size: 1.15rem; 
+            font-size: 1.2rem; 
             color: #727682; 
             margin-bottom: 48px; 
             max-width: 520px; 
             font-weight: 300;
         }
 
-        /* Der originale Carrd-Button mit sanftem Schwebe-Effekt */
         .scroll-btn {
             display: inline-flex;
             align-items: center;
@@ -63,12 +76,11 @@
             background-color: #F4F5F7;
             color: #2D3142;
             text-decoration: none;
-            padding: 14px 28px;
+            padding: 16px 32px;
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 500;
             transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
         }
 
         .scroll-btn:hover {
@@ -76,72 +88,62 @@
             transform: translateY(-2px);
         }
 
-        .scroll-btn svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-            transition: transform 0.25s ease;
-        }
-
-        .scroll-btn:hover svg {
-            transform: translateY(2px);
-        }
-
-        /* Sektion 2: Der Marken-Bereich (wird durch Button angesprungen) */
         .brands-section {
-            min-height: 60vh;
+            min-height: 50vh;
             width: 100%;
-            max-width: 600px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 80px 24px;
+            padding: 80px 40px;
             text-align: center;
+            background-color: #FAFBFD;
+            border-top: 1px solid #F0F2F5;
+            border-bottom: 1px solid #F0F2F5;
         }
 
         h2 {
-            font-family: 'Lora', serif;
-            font-size: 1.8rem;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 2rem;
             font-weight: 400;
             margin-bottom: 16px;
             color: #1D202D;
         }
 
         .brand-intro {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #727682;
             margin-bottom: 48px;
             max-width: 440px;
+            font-weight: 300;
         }
 
-        /* Visuelle Container-Box für dein Logo wie im Carrd-Template */
         .logo-card {
             background: #FFFFFF;
             border: 1px solid #EAECEF;
-            padding: 40px 60px;
-            border-radius: 12px;
+            padding: 45px 65px;
+            border-radius: 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-decoration: none;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
-            max-width: 340px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.01);
+            max-width: 360px;
             width: 100%;
         }
 
         .logo-card:hover {
-            transform: translateY(-4px);
-            border-color: #D2D5DA;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+            border-color: #C3C7CD;
+            box-shadow: 0 16px 40px rgba(13, 24, 44, 0.08);
         }
 
         .logo-img {
-            max-width: 200px;
+            max-width: 210px;
             height: auto;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .logo-card span {
@@ -149,22 +151,19 @@
             color: #9499A6;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        /* Sektion 3: Das rechtssichere Schweizer Impressum im Footer */
         footer {
             width: 100%;
-            max-width: 600px;
-            border-top: 1px solid #EAECEF;
-            padding: 60px 24px;
-            margin-top: auto;
+            padding: 80px 40px;
             text-align: center;
+            background: #FFFFFF;
         }
 
         footer h3 {
-            font-family: 'Lora', serif;
-            font-size: 1.4rem;
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1.5rem;
             font-weight: 400;
             margin-bottom: 24px;
             color: #1D202D;
@@ -175,17 +174,12 @@
             color: #4E5260;
             margin: 0 auto 32px auto;
             line-height: 1.8;
-            max-width: 300px;
+            max-width: 320px;
             text-align: left;
-            background: #FAFAFB;
+            background: #F8F9FA;
             padding: 24px;
-            border-radius: 8px;
-            border: 1px solid #F0F1F3;
-        }
-
-        .mail-box {
-            font-size: 0.95rem;
-            color: #4E5260;
+            border-radius: 12px;
+            border: 1px solid #EAECEF;
         }
 
         .mail-link {
@@ -193,8 +187,7 @@
             text-decoration: none;
             font-weight: 500;
             border-bottom: 1px solid #1D202D;
-            transition: all 0.2s ease;
-            padding-bottom: 1px;
+            transition: color 0.2s ease;
         }
 
         .mail-link:hover {
@@ -202,54 +195,55 @@
             border-color: #727682;
         }
 
-        /* Responsive Anpassungen für Mobilgeräte (Smartphones) */
+        /* Optimierungen für Mobilgeräte */
         @media (max-width: 480px) {
-            h1 { font-size: 2.3rem; }
-            .hero-section { min-height: 75vh; }
-            .logo-card { padding: 30px 40px; }
+            h1 { font-size: 2.4rem; }
+            .hero-section, .brands-section, footer { padding: 48px 20px; }
+            .page-wrapper { margin: 16px 10px; border-radius: 16px; }
+            .logo-card { padding: 35px 40px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero-Bereich (Oben) -->
-    <section class="hero-section">
-        <h1>Aust-Swiss Momentum</h1>
-        <p class="subtitle">Schweizer Online-Shops mit Fokus auf Qualität und Zuverlässigkeit. Entdecken Sie unsere Marken.</p>
-        
-        <!-- Sprung-Button zur Markenübersicht -->
-        <a href="#marken" class="scroll-btn">
-            Unsere Marken entdecken
-            <svg viewBox="0 0 16 16"><path d="M8 12.5a.74.74 0 0 1-.53-.22L2.22 7.03a.75.75 0 0 1 1.06-1.06L8 10.69l4.72-4.72a.75.75 0 0 1 1.06 1.06l-5.25 5.25a.74.74 0 0 1-.53.22z"/></svg>
-        </a>
-    </section>
+    <!-- Die weisse Inhaltsbox auf dem edlen Farbverlauf -->
+    <div class="page-wrapper">
 
-    <!-- Marken-Bereich (Mitte) -->
-    <section class="brands-section" id="marken">
-        <h2>Unsere Stores</h2>
-        <p class="brand-intro">Klicken Sie auf das Markenlogo, um direkt zu unserem verifizierten Schweizer Onlineshop zu gelangen.</p>
-        
-        <!-- Deine klickbare Logo-Card -->
-        <a href="https://yuniglow.ch" class="logo-card" target="_blank" rel="noopener">
-            <img src="https://yuniglow.chcdn/shop/files/YuniGlow_Logo_V2_black_180x.png" alt="YuniGlow Logo" class="logo-img">
-            <span>Store öffnen ➔</span>
-        </a>
-    </section>
+        <!-- Sektion 1: Hero -->
+        <section class="hero-section">
+            <h1>Aust-Swiss Momentum</h1>
+            <p class="subtitle">Schweizer Online-Shops mit Fokus auf Qualität und Zuverlässigkeit. Entdecken Sie unsere Marken.</p>
+            <a href="#marken" class="scroll-btn">Unsere Marken entdecken ↓</a>
+        </section>
 
-    <!-- Rechtssicheres Impressum (Unten) -->
-    <footer>
-        <h3>Impressum & Kontakt</h3>
-        <div class="impressum-grid">
-            <strong>Aust-Swiss Momentum</strong><br>
-            René Aust<br>
-            Aarestrasse 54<br>
-            3052 Zollikofen<br>
-            Schweiz
-        </div>
-        <div class="mail-box">
-            E-Mail: <a href="mailto:kontakt@aust-swiss-momentum.ch" class="mail-link">kontakt@aust-swiss-momentum.ch</a>
-        </div>
-    </footer>
+        <!-- Sektion 2: Stores -->
+        <section class="brands-section" id="marken">
+            <h2>Unsere Stores</h2>
+            <p class="brand-intro">Klicken Sie auf das Markenlogo, um direkt zu unserem verifizierten Schweizer Onlineshop zu gelangen.</p>
+            
+            <a href="https://yuniglow.ch" class="logo-card" target="_blank" rel="noopener">
+                <!-- Zieht deine gestochen scharfe Vektordatei direkt aus dem GitHub-Ordner -->
+                <img src="Vector.svg" alt="YuniGlow Logo" class="logo-img">
+                <span>Store öffnen ➔</span>
+            </a>
+        </section>
+
+        <!-- Sektion 3: Rechtssicheres Schweizer Impressum -->
+        <footer>
+            <h3>Impressum & Kontakt</h3>
+            <div class="impressum-grid">
+                <strong>Aust-Swiss Momentum</strong><br>
+                René Aust<br>
+                Aarestrasse 54<br>
+                3052 Zollikofen<br>
+                Schweiz
+            </div>
+            <div>
+                E-Mail: <a href="mailto:kontakt@aust-swiss-momentum.ch" class="mail-link">kontakt@aust-swiss-momentum.ch</a>
+            </div>
+        </footer>
+
+    </div>
 
 </body>
 </html>
