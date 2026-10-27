@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aust Swiss Momentum</title>
-    <!-- Zuverlässiges Laden der Marcellus & Plus Jakarta Sans über Google Fonts -->
+    <!-- Einbindung von Playfair Display für den exakten Look deines neuen Screenshots -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
             font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; 
-            /* Der neue, luxuriöse und ultra-sanfte Seidenmatt-Farbverlauf */
-            background: linear-gradient(135deg, #FDFDFE 0%, #F5F6FA 45%, #ECEFF4 100%);
-            background-attachment: fixed;
+            /* Flacher, extrem dezenter und absolut unaufgeregter Hintergrund ohne wilde Verläufe */
+            background-color: #F8F9FA;
             color: #2D3142; 
             line-height: 1.7; 
             display: flex; 
@@ -26,15 +25,15 @@
             scroll-behavior: smooth;
         }
 
-        /* Haupt-Rahmen (Box) für den edlen, schwebenden Carrd-Karten-Effekt */
+        /* Haupt-Rahmen (Box) im klassischen, flachen Carrd-Stil */
         .page-wrapper {
             width: 100%;
             max-width: 760px;
             background: #FFFFFF;
             margin: 60px 20px;
-            border-radius: 24px;
-            box-shadow: 0 40px 90px rgba(15, 28, 55, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+            border: 1px solid #EAECEF;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,34 +41,36 @@
         }
 
         .hero-section {
-            min-height: 65vh;
+            min-height: 60vh;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 90px 40px;
+            padding: 100px 40px 80px 40px;
             text-align: center;
         }
 
-        /* EXAKTE ABSTIMMUNG NACH DEINEM BILD: Marcellus, enges Letter-Spacing, feiner Ton */
+        /* EXAKTER LOOK NACH DEINEM NEUEN SCREENSHOT: Playfair Display, normale Weite, tiefer Ton */
         h1 { 
-            font-family: 'Marcellus', serif; 
+            font-family: 'Playfair Display', Georgia, serif; 
             font-size: 3.8rem; 
-            font-weight: 400; 
-            letter-spacing: -1.5px; /* Zieht die Buchstaben perfekt elegant zusammen */
-            margin-bottom: 24px; 
-            color: #4A505E; /* Das edle Schiefer-Anthrazit aus deiner Vorlage */
+            font-weight: 500; 
+            letter-spacing: 0px; /* Normaler, eleganter Zeichenabstand wie auf dem Bild */
+            margin-bottom: 35px; 
+            color: #1A1E29; /* Tiefes, fast schwarzes Anthrazit */
             text-transform: none;
-            line-height: 1.1;
+            line-height: 1.2;
         }
 
+        /* Untertext exakt wie auf deinem Screenshot abgestimmt (Farbe, Grösse, Zeilenabstand) */
         .subtitle { 
             font-size: 1.15rem; 
-            color: #727682; 
+            color: #7F8491; 
             margin-bottom: 48px; 
-            max-width: 520px; 
-            font-weight: 300;
+            max-width: 480px; 
+            font-weight: 400;
+            line-height: 1.6;
         }
 
         .scroll-btn {
@@ -79,16 +80,16 @@
             background-color: #F4F5F7;
             color: #2D3142;
             text-decoration: none;
-            padding: 16px 32px;
+            padding: 14px 30px;
             border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 500;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
         .scroll-btn:hover {
             background-color: #E8EAEF;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
 
         .brands-section {
@@ -106,20 +107,19 @@
         }
 
         h2 {
-            font-family: 'Marcellus', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 2.1rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
+            font-weight: 500;
             margin-bottom: 16px;
-            color: #4A505E;
+            color: #1A1E29;
         }
 
         .brand-intro {
             font-size: 1.05rem;
-            color: #727682;
+            color: #7F8491;
             margin-bottom: 48px;
             max-width: 440px;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .logo-card {
@@ -131,16 +131,16 @@
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.01);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
             max-width: 360px;
             width: 100%;
         }
 
         .logo-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             border-color: #C3C7CD;
-            box-shadow: 0 16px 40px rgba(15, 28, 55, 0.07);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
         }
 
         .logo-img {
@@ -166,12 +166,11 @@
         }
 
         footer h3 {
-            font-family: 'Marcellus', serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.5rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
+            font-weight: 500;
             margin-bottom: 24px;
-            color: #4A505E;
+            color: #1A1E29;
         }
 
         .impressum-grid {
@@ -188,21 +187,21 @@
         }
 
         .mail-link {
-            color: #1D202D;
+            color: #1A1E29;
             text-decoration: none;
             font-weight: 500;
-            border-bottom: 1px solid #1D202D;
+            border-bottom: 1px solid #1A1E29;
             transition: color 0.2s ease;
         }
 
         .mail-link:hover {
-            color: #727682;
-            border-color: #727682;
+            color: #7F8491;
+            border-color: #7F8491;
         }
 
         /* Optimierungen für Mobilgeräte (Smartphones) */
         @media (max-width: 480px) {
-            h1 { font-size: 2.6rem; letter-spacing: -1px; }
+            h1 { font-size: 2.5rem; }
             .hero-section, .brands-section, footer { padding: 50px 20px; }
             .page-wrapper { margin: 20px 12px; border-radius: 16px; }
             .logo-card { padding: 35px 40px; }
